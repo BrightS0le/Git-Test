@@ -10,6 +10,8 @@ namespace Git_Test
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Please kill me, *cough* *cough* I mean Hello World!");
+            Console.ReadKey();
         }
     }
 }
