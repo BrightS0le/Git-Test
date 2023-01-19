@@ -18,7 +18,7 @@ namespace Git_Test
             if (v == "n")
             {
                 Console.WriteLine("That's a shame...");
-                System.Threading.Thread.Sleep(1500);
+                Console.ReadKey();
                 return;
             }
             Random rnd = new Random();
@@ -30,16 +30,16 @@ namespace Git_Test
             {
                 if (userNum < n)
                 {
-                    Console.WriteLine("Higher");
+                    Console.WriteLine("Higher. Please enter a new number...");
                 }
                 if(userNum > n)
                 {
-                    Console.WriteLine("Lower");
+                    Console.WriteLine("Lower. Please enter a new number...");
                 }
                 userNum = int.Parse(Console.ReadLine());
             }
             Console.WriteLine("Congratulations! You got it the number was " + n + "!");
-            System.Threading.Thread.Sleep(10000);
+            Console.ReadKey();
         }
     }
 }
