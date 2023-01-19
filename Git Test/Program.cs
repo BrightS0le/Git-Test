@@ -21,10 +21,14 @@ namespace Git_Test
                 Console.ReadKey();
                 return;
             }
+            Console.WriteLine("Please enter a number for the minimum value...");
+            int lower = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter a number for the maximum value...");
+            int upper = int.Parse(Console.ReadLine());
             Random rnd = new Random();
-            int n = rnd.Next(1, 100);
-            int userNum = 0;
-            Console.WriteLine("I am thinking of a number between 1 and 100...");
+            int n = rnd.Next(lower, upper);
+            int userNum;
+            Console.WriteLine("I am thinking of a number between " + lower + " and " + upper + "...");
             userNum = int.Parse(Console.ReadLine());
             while (userNum != n)
             {
