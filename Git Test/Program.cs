@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//Hunter Johnson 
+//1/19/2023
+//brief: It's a number guessing game
+//Description: Takes in two user inputs for an upper and lower bound then generates a random number between
+//the two and then proceeds to stimulate and extract guesses from the user until the correct one is obtained
 namespace Git_Test
 {
     class Program
