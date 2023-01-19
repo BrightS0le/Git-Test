@@ -13,12 +13,32 @@ namespace Git_Test
             string v;
             Console.WriteLine("Please kill me, *cough* *cough* I mean Hello World!");
             Console.WriteLine("I am not smart enough for this...");
-            Console.WriteLine("For the next values please enter a lower and upper bound for a number guessing game respectively...");
-            Console.Write("Enter the value for x:");
-            int x = int.Parse(Console.ReadLine());
-            Console.Write("Enter the value for y:");
-            int y = int.Parse(Console.ReadLine());
-            Console.Write("X:" + x + " Y:" + y);
+            Console.WriteLine("Would you like to play a number guessing game? (y or n)");
+            v = Console.ReadLine();
+            if (v == "n")
+            {
+                Console.WriteLine("That's a shame...");
+                Console.ReadKey();
+                return;
+            }
+            Random rnd = new Random();
+            int n = rnd.Next(1, 100);
+            int userNum = 0;
+            Console.WriteLine("I am thinking of a number between 1 and 100...");
+            userNum = int.Parse(Console.ReadLine());
+            while (userNum != n)
+            {
+                if (userNum < n)
+                {
+                    Console.WriteLine("Higher. Please enter a new number...");
+                }
+                if (userNum > n)
+                {
+                    Console.WriteLine("Lower. Please enter a new number...");
+                }
+                userNum = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Congratulations! You got it the number was " + n + "!");
             Console.ReadKey();
         }
     }
